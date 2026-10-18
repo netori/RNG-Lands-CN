@@ -1,5 +1,15 @@
 # Changelog / 更新日志
 
+## [修复] - 2026-10-18（downloads 重打包，文件名不变）
+
+修复 `msg/zhocn/*.msgbnd.dcx` 的 BND4 哈希表布局：之前用的是 soulstruct 的私有布局
+（24 字节表头 + 相对偏移），游戏本体能读，但 **Elden Ring Randomizer** 在
+`SoulsFormats.BinderHashTable.Assert` 处会断言失败：
+`Read Byte: 0x0 | Expected: 0x10` —— 用「Merge other mod」合并本补丁时整次随机化会中止。
+现已改为 FROM / SoulsFormats 标准布局（16 字节表头 + 绝对偏移）；
+`downloads/` 下 16 个 zip 已用修正后的文件重新打包（文件名与版本号不变），
+`SHA256SUMS.txt` 已同步更新。
+
 ## [1.0.0] - 2026-10-17
 
 首个公开版本。
