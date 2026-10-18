@@ -1,6 +1,6 @@
 # Changelog / 更新日志
 
-## [修复] - 2026-10-18（downloads 重打包，文件名不变）
+## [1.0.1] - 2026-10-18（修复 BND4 布局；downloads 重打包，文件名不变）
 
 修复 `msg/zhocn/*.msgbnd.dcx` 的 BND4 哈希表布局：之前用的是 soulstruct 的私有布局
 （24 字节表头 + 相对偏移），游戏本体能读，但 **Elden Ring Randomizer** 在

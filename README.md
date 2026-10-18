@@ -2,7 +2,7 @@
 
 ![preview](images/preview-banner.png)
 
-> **RNG Lands 0.7.2 · Elden Ring 1.17.x · v1.0.0**
+> **RNG Lands 0.7.2 · Elden Ring 1.17.x · v1.0.1**
 > 物品名 / 说明 / 随机故事 / 菜单 / 教程 / HUD —— 全量中文
 
 ---
@@ -47,7 +47,12 @@
 > 不确定用哪个：看你的 RNG Lands 目录名（Ruby / Apache / Pack 10），Pack 10 再看配置文件夹名。
 > 详细的对照表见 [docs/VARIANT-MAP.md](docs/VARIANT-MAP.md)。
 >
-> 也可以到 **Releases** 页下载合并包（全部 16 组）与 Nexus 风格的三个打包（Ruby / Apache / Pack 10）。
+> 也可以到 [Releases](../../releases) 页下载：全部 16 组合并包，以及本补丁的各变体附件。
+>
+> **2026-10-18 修复（v1.0.1）**：`downloads/` 下 16 个 zip 已重新打包（文件名 / 版本号不变），
+> 修复 `msg/zhocn/*.msgbnd.dcx` 的 BND4 哈希表布局 —— 旧包在游戏内可正常显示，但用
+> **Elden Ring Randomizer** 的「Merge other mod」合并本补丁时，会在 `SoulsFormats.BinderHashTable.Assert`
+> 处断言失败并中止随机化。`SHA256SUMS.txt` 已同步更新。
 
 ## 安装
 
